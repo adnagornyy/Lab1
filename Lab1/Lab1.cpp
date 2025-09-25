@@ -1,0 +1,46 @@
+﻿// Lab1.cpp: определяет точку входа для приложения.
+//
+
+#include "Lab1.h"
+
+#include <cfloat>  
+
+#include <limits>  
+using namespace std;
+
+
+
+int main()
+{	// Высота трапеции
+	//может unsigned char
+	short int hight;
+	
+	// Основания трапеции
+	short int firstBase, secondBase;
+
+	//вводим данные
+	cin >> hight;
+	cin >> firstBase;
+	cin >> secondBase;
+
+	//считаем прощадь
+	short int Sp = (firstBase + secondBase) * hight / 2;
+	//float Sp = (firstBase + secondBase) * hight / 2;
+
+	std::cout << Sp << "\n" << "short int" << "\n";
+	//std::cout << Sp << "\n" << "float" << "\n";
+	std::cout << "short int" << "\n" << sizeof(short) * 8 << "\n" << -pow(2, sizeof(short) * 8 - 1) << "\n" << pow(2, sizeof(short) * 8 - 1) - 1 << "\n";
+	std::cout << "unsigned char" << "\n" << sizeof(char) * 8 << "\n" << 0 << "\n" << (unsigned int)(pow(2, sizeof(char) * 8) - 1) << endl << "\n";
+	
+	//std::cout << "float " << "\n" << sizeof(float) * 8 << "\n" << FLT_MIN << "\n" << FLT_MAX << endl << "\n";
+
+
+	
+
+
+	
+	return 0;
+
+
+
+}
